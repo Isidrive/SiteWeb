@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Description du produit </title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<?php include("includes/pageentete.php"); 
+// Utilisation de connexion.inc.php pour ce connecter à la base de donnée
+	require_once("connexion.inc.php");
+	?>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<center>
+		<div class="p-3 mb-2 bg-primary text-white"><h3>Historique<h3></div>
+			<br>
+			<?php
+			$cnn2 = new PDO("odbc:Driver={SQL Server};Server=WINDOWSSIO7\SQLSERVER2012;Database=UDrive_perrodon_goncalves;Uid=sa;Pwd=mdpsa;");
+			?>
+			<?php
+			$clinum = $_SESSION['clinum'];
+			$reqresult = $cnn->prepare("select * from commande where clinum=$clinum");
+			$reqresult->execute();
+			$uneligne = $reqresult->fetch();
+			?>
+			<div class=container>
+				<div class="row">
+					<?php
+					while ($uneligne!=null)
+					{
+						?>
+						<div class="col-md-4 produit-case">
+							<?php
+							echo(utf8_encode("<b>Commande numéro : ") . $uneligne["comnum"] . "</b><br>");
+							echo("Date de la commande : <i>" . $uneligne["comdateh"] . "<br>" . "</i>Date du retrait : <i> " . $uneligne["comdatehretrait"] . "</i><br>"); 
+							$reqresult2 = $cnn2->prepare("select * from commander join produit on commander.pronum=produit.pronum where comnum=". $uneligne["comnum"]);
+							$reqresult2->execute();
+							$deuxligne = $reqresult2->fetch();
+
+							while ($deuxligne!=null)
+							{
+								echo(utf8_encode("Quantité : ") . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
+								$deuxligne = $reqresult2->fetch();
+							}
+							$reqresult2->closeCursor();
+							$uneligne = $reqresult->fetch();
+							?>
+						</div>
+						<?php
+					} 
+					?>
+				</body>
+				</html>
