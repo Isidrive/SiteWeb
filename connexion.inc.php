@@ -1,3 +1,4 @@
 <?php
-$cnn = new PDO("odbc:Driver={SQL Server};Server=WINDOWSSIO7\SQLSERVER2012;Database=UDrive_perrodon_goncalves;Uid=sa;Pwd=mdpsa;");
+$cnn = new PDO("odbc:Driver={SQL Server};Server=SRV-APPLICATION;Database=Isidrive;Uid=alexandre;Pwd=A*14nJqXS+;");
 ?>
+
