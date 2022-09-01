@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Produits </title>
+	<title>Produits</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<?php include("includes/pageentete.php"); 
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
