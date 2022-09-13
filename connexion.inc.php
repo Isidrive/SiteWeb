@@ -1,5 +1,5 @@
 <?php
-$cnn = new PDO("odbc:Driver={SQL Server};Server=37.187.143.111;Database=Isidrive;Uid=ISIDRIVE\alexandre;Pwd=A*14nJqXS+");
+$cnn = new PDO("mysql://b6b5a59b76adf9:1f4603cc@eu-cdbr-west-03.cleardb.net/heroku_ed5518a9c03f82b?reconnect=true");
 
 // Check connection
 if ($cnn->connect_error) {
