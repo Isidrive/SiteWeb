@@ -1,7 +1,7 @@
 <?php
 include("includes/pageentete.php");
 require_once("connexion.inc.php");
-//---------------- 1A : Affichage du formulaire avec les catégories 
+//---------------- 1A : Affichage du formulaire avec les catégories
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ require_once("connexion.inc.php");
   <title> U Drive </title>
 </head>
 <center>
-  <!-- En-tête --> 
+  <!-- En-tête -->
   <div class="p-3 mb-2 bg-primary text-white"><h3><b>Bienvenue sur le site U Drive !</b></h3></div>
   <!-- FIN En-tête -->
   <div class="container">
@@ -23,16 +23,16 @@ require_once("connexion.inc.php");
       <div class="col-sm index-case">
         <b>Un vaste catalogue</b> <br>
         Sur U Drive, retrouvez tout les produits qui vous avez l'habitude d'acheter en magasin ! La catalogue en ligne est identique à celui de votre
-        magasin U préféré. Les stocks sont constamments alimentés pour vous garantir le choix le plus vaste possible ! 
+        magasin U préféré. Les stocks sont constamments alimentés pour vous garantir le choix le plus vaste possible !
       </div>
       <div class="col-sm index-case">
         <b>Un paiement sécurisé</b> <br>
-        Ayez le choix parmis de nombreux moyens de paiements (carte bancaire, PayPal...). Vos paiements sont sécurisés grâce à la sécurisation en ligne mise au point par la classe de BTS SIO 2 SLAM.
+        Ayez le choix parmis de nombreux moyens de paiements (carte bancaire, PayPal...). Vos paiements sont sécurisés grâce à la sécurisation en ligne mise au point par l'équipe de isidrive'.
 
       </div>
       <div class="col-sm index-case">
         <b>En magasin ou à domicile</b> <br>
-        Choissisez le retrait de votre commande au magasin le plus proche de chez vous, ou choissisez la livraison à domicile ! 
+        Choissisez le retrait de votre commande au magasin le plus proche de chez vous, ou choissisez la livraison à domicile !
       </div>
     </div>
     Nous vous souhaitons une bonne viste sur le site U Drive, et à bientôt !
