@@ -17,7 +17,7 @@
 			$dbname = "heroku_ed5518a9c03f82b";
 			$user = "b6b5a59b76adf9";
 			$pass ="1f4603cc";
-			$cnn = new PDO("mysql:host=$host; dbname=$dbname;", $user, $pass);
+			$cnn2 = new PDO("mysql:host=$host; dbname=$dbname;", $user, $pass);
 			?>
 			<?php
 			$clinum = $_SESSION['clinum'];
@@ -33,7 +33,7 @@
 						?>
 						<div class="col-md-4 produit-case">
 							<?php
-							echo(utf8_encode("<b>Commande num�ro : ") . $uneligne["comnum"] . "</b><br>");
+							echo(utf8_encode("<b>Commande numéro : ") . $uneligne["comnum"] . "</b><br>");
 							echo("Date de la commande : <i>" . $uneligne["comdateh"] . "<br>" . "</i>Date du retrait : <i> " . $uneligne["comdatehretrait"] . "</i><br>");
 							$reqresult2 = $cnn2->prepare("select * from commander join produit on commander.pronum=produit.pronum where comnum=". $uneligne["comnum"]);
 							$reqresult2->execute();
