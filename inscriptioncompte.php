@@ -21,7 +21,7 @@ include("includes/pageentete.php");
 					</div>
 					<div class="form-group col-md-4">
 						<label for="inputCity">Téléphone</label>
-						<input type="number" class="form-control" id="inputCity" name="txttel"  maxLength="10">
+						<input type="number" class="form-control" id="inputCity" name="txttel"  maxLength="10" min="0">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputEmail4">Email</label>
@@ -45,7 +45,7 @@ include("includes/pageentete.php");
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputZip">Code Postal</label>
-						<input type="number" class="form-control" id="inputZip" name="txtcp"  maxLength="5">
+						<input type="number" class="form-control" id="inputZip" name="txtcp"  maxLength="5" min="0">
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary" name="btnajouter">S'incrire</button>
