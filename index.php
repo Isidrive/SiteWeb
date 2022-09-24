@@ -27,7 +27,7 @@ require_once("connexion.inc.php");
       </div>
       <div class="col-sm index-case">
         <b>Un paiement sécurisé</b> <br>
-        Ayez le choix parmis de nombreux moyens de paiements (carte bancaire, PayPal...). Vos paiements sont sécurisés grâce à la sécurisation en ligne mise au point par l'équipe de isidrive'.
+        Ayez le choix parmis de nombreux moyens de paiements (carte bancaire, PayPal...). Vos paiements sont sécurisés grâce à la sécurisation en ligne mise au point par l'équipe de isidrive.
 
       </div>
       <div class="col-sm index-case">
