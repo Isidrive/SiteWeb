@@ -33,7 +33,7 @@
 						?>
 						<div class="col-md-4 produit-case">
 							<?php
-							echo(utf8_encode("<b>Commande numéro : ") . $uneligne["comnum"] . "</b><br>");
+							echo("<b>Commande numéro : " . $uneligne["comnum"] . "</b><br>");
 							echo("Date de la commande : <i>" . $uneligne["comdateh"] . "<br>" . "</i>Date du retrait : <i> " . $uneligne["comdatehretrait"] . "</i><br>"); 
 							$reqresult2 = $cnn2->prepare("select * from commander join produit on commander.pronum=produit.pronum where comnum=". $uneligne["comnum"]);
 							$reqresult2->execute();
@@ -41,7 +41,7 @@
 
 							while ($deuxligne!=null)
 							{
-								echo(utf8_encode("Quantit� : ") . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
+								echo("Quantité : " . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
 								$deuxligne = $reqresult2->fetch();
 							}
 							$reqresult2->closeCursor();
