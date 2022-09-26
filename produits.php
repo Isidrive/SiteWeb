@@ -2,7 +2,7 @@
 <head>
 	<title>Produits</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<?php include("includes/pageentete.php"); 
+	<?php include("includes/pageentete.php");
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
 	require_once("connexion.inc.php");
 	?>
@@ -11,9 +11,9 @@
 
 	<center>
 		<div class="p-3 mb-2 bg-primary text-white"><h3>Produits<h3></div>
-			
+
 			<form method="get" action ="produits.php">
-				Catégorie : <select onchange='form.submit()' name="catnum">
+				Catégorie : <select class="form-select" aria-label="Default" onchange='form.submit()' name="catnum">
 					<option ></option>
 					<?php
 // Requête permettant d'extraire les catégories
@@ -37,11 +37,11 @@
 					?>
 				</select>
 				<!--Fin de la requête permettant d'extraire les catégories-->
-				<?php 
+				<?php
 				if (isset($_GET["catnum"]) && $_GET["catnum"]!="" )
 				{
 					?>
-					<br>Sous-catégorie : <select onchange='form.submit()' name="sounum">
+					<br>Sous-catégorie : <select class="form-select" aria-label="Default" onchange='form.submit()' name="sounum">
 						<option ></option>
 						<?php
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
@@ -99,8 +99,8 @@ if (isset($_GET['id']) == true) {
 		$uneligne = $reqresult->fetch();
 		$n=1;
 		echo "Page : ";
-		for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10) 
-		{ 
+		for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+		{
 
 			echo '<a href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a>';
 			$n++;
@@ -115,22 +115,22 @@ if (isset($_GET['id']) == true) {
 
 
 		$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT TOP $id pronum from produit where prolib LIKE '%". $txtrech ."%' ORDER BY pronum) ORDER BY pronum");
-		
+
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		echo("<table border=1 >");
-		
-		
+
+
 		while ($uneligne!=null)
 		{
 			echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
-			
+
 
 			echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 			$uneligne = $reqresult->fetch();
 		}
 		echo("</table>");
-		$reqresult->closeCursor();	
+		$reqresult->closeCursor();
 	}
 	else
 	{
@@ -144,10 +144,10 @@ if (isset($_GET['id']) == true) {
 		$uneligne = $reqresult->fetch();
 		$n=1;
 		echo "Page : ";
-		
+
 		$catnum = $_GET['catnum'];
-		for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10) 
-		{ 
+		for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+		{
 
 			echo '<a href="produits.php?id=' .$i. '&sounum=' .$sounum. '&txtrech=' .$txtrech. '&catnum=' .$catnum. '">' .$n. '</a>';
 			$n++;
@@ -163,16 +163,16 @@ if (isset($_GET['id']) == true) {
 
 
 		$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT TOP $id pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum) ORDER BY pronum");
-		
+
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		echo("<table border=1 >");
-		
-		
+
+
 		while ($uneligne!=null)
 		{
 			echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
-			
+
 
 			echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 			$uneligne = $reqresult->fetch();
@@ -194,8 +194,8 @@ if (isset($_GET['id']) == true) {
 			$catnum = $_GET['catnum'];
 			echo "Page : ";
 			$txtrech = $_GET["txtrech"];
-			for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10) 
-			{ 
+			for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+			{
 
 				echo '<a href="produits.php?id=' .$i. '&sounum=' .$sounum. '&txtrech=' .$txtrech. '&catnum=' .$catnum. '">' .$n. '</a>';
 				$n++;
@@ -236,8 +236,8 @@ if (isset($_GET['id']) == true) {
 				$n=1;
 				echo "Page : ";
 				$txtrech = $_GET["txtrech"];
-				for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10) 
-				{ 
+				for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+				{
 
 					echo '<a href="produits.php?id=' .$i. '&sounum=&txtrech=' .$txtrech. '&catnum=">' .$n. '</a>';
 					$n++;
@@ -280,19 +280,19 @@ if (isset($_GET["txtrech"]) == true)
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		echo("<table border=1 >");
-		
+
 		while ($uneligne!=null)
 			{
 				echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
-			
-		
+
+
     			echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
     			$uneligne = $reqresult->fetch();
 	}
 echo("</table>");
 $reqresult->closeCursor();
 $cnn=null;}
-	
+
 ?>
 */
 ?>
@@ -306,11 +306,3 @@ $cnn=null;}
 </center>
 </body>
 </html>
-
-
-
-
-
-
-
-
