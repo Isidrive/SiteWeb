@@ -61,11 +61,11 @@
 
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
-				$dateactuelbd = NOW();
+
 				$dateretrait = $_GET["dateretrait"];
 				$clinum = $_SESSION['clinum'];
 
-				$reqresult = $cnn -> prepare("insert into commande (comdateh,comdatehretrait,comprepareok,comlivreok,clinum) VALUES ('$dateactuelbd','$dateretrait',0,0,$clinum)");
+				$reqresult = $cnn -> prepare("insert into commande (comdateh,comdatehretrait,comprepareok,comlivreok,clinum) VALUES (NOW(),'$dateretrait',0,0,$clinum)");
 				
 
 
