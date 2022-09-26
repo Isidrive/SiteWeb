@@ -13,7 +13,7 @@
 		<div class="p-3 mb-2 bg-primary text-white"><h3>Produits<h3></div>
 
 			<form method="get" action ="produits.php">
-				Catégorie : <select class="form-select" aria-label="Default" onchange='form.submit()' name="catnum">
+				Catégorie : <select class="form-select mx-auto" aria-label="Default" onchange='form.submit()' name="catnum">
 					<option ></option>
 					<?php
 // Requête permettant d'extraire les catégories
