@@ -61,7 +61,7 @@
 
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
-				$dateactuelbd = date("d-m-Y H:i:s");
+				$dateactuelbd = NOW();
 				$dateretrait = $_GET["dateretrait"];
 				$clinum = $_SESSION['clinum'];
 
