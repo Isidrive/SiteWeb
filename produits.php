@@ -114,7 +114,7 @@ if (isset($_GET['id']) == true) {
 		$id = $_GET['id'];
 
 
-		$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT TOP $id pronum from produit where prolib LIKE '%". $txtrech ."%' ORDER BY pronum) ORDER BY pronum");
+		$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT pronum from produit where prolib LIKE '%". $txtrech ."%' limit $id ORDER BY pronum) limit 10 ORDER BY pronum");
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
@@ -162,7 +162,7 @@ if (isset($_GET['id']) == true) {
 		$sousnum =$_GET['sounum'];
 
 
-		$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT TOP $id pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum) ORDER BY pronum");
+		$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' limit $id ORDER BY pronum) LIMIT 10 ORDER BY pronum");
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
@@ -206,7 +206,7 @@ if (isset($_GET['id']) == true) {
 //require_once("connexion.inc.php");
 		//$id = 1;
 
-			$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where sounum = :sounum and prolib LIKE '%". $_GET["txtrech"] ."%'");
+			$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = :sounum and prolib LIKE '%". $_GET["txtrech"] ."%' limit 10" );
 			$reqresult->bindParam(':sounum',$_GET["sounum"],PDO::PARAM_INT);
 			$reqresult->execute();
 			$uneligne = $reqresult->fetch();
@@ -245,7 +245,7 @@ if (isset($_GET['id']) == true) {
 				}
 
 
-				$reqresult = $cnn->prepare("select TOP 10 pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $_GET["txtrech"] ."%'");
+				$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $_GET["txtrech"] ."%' limit 10");
 				$reqresult->execute();
 				$uneligne = $reqresult->fetch();
 				echo("<table border=1 >");
