@@ -47,8 +47,8 @@
 				<div class="container">
 
 						<div class="form-group col-md-4">
-							<label for="inputCity">Date de retrait au format Année - Mois - Jour</label>
-							<input type="text" class="form-control" id="inputCity"  placeholder="exemple : 2018-05-29" name="dateretrait">
+							<label for="inputCity">Date de retrait au format Jour - Mois - Annee</label>
+							<input type="text" class="form-control" id="inputCity"  placeholder="exemple : 25-09-2022" name="dateretrait">
 						</div>
 					
 					<br>
@@ -61,11 +61,12 @@
 
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
-				$dateactuelbd = date("Y-m-d H:i:s");
+				$dateactuelbd = date("d-m-Y H:i:s");
 				$dateretrait = $_GET["dateretrait"];
 				$clinum = $_SESSION['clinum'];
 
 				$reqresult = $cnn -> prepare("insert into commande (comdateh,comdatehretrait,comprepareok,comlivreok,clinum) VALUES ('$dateactuelbd','$dateretrait',0,0,$clinum)");
+				
 
 
 				$reqresult -> execute();

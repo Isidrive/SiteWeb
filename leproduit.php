@@ -1,5 +1,5 @@
 <html>
-<head>
+	<head>
 	<title>Description du produit </title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<?php include("includes/pageentete.php"); 
@@ -38,9 +38,10 @@
 			$_SESSION["tblquantite"][] = $_GET["quantite"];
 			?>
 			<div class="p-3 mb-2 bg-light text-dark">Le produit a bien été ajouté au panier. Redirection automatique dans 3 secondes.</div> 
+			<meta http-equiv="refresh" content="5;URL='produits.php'">
 				<?php
-				header("Refresh: 3; URL=produits.php");
 				
+				 //header("Refresh: 3; URL=produits.php");
 		}
 
 		$reqresult->closeCursor();

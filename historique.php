@@ -2,8 +2,8 @@
 <head>
 	<title>Description du produit </title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<?php include("includes/pageentete.php");
-// Utilisation de connexion.inc.php pour ce connecter ï¿½ la base de donnï¿½e
+	<?php include("includes/pageentete.php"); 
+// Utilisation de connexion.inc.php pour ce connecter à la base de donnée
 	require_once("connexion.inc.php");
 	?>
 	<meta charset="UTF-8">
@@ -11,13 +11,11 @@
 <body>
 	<center>
 		<div class="p-3 mb-2 bg-primary text-white"><h3>Historique<h3></div>
-			<br>
+			<br
 			<?php
-			$host ="eu-cdbr-west-03.cleardb.net";
-			$dbname = "heroku_ed5518a9c03f82b";
-			$user = "b6b5a59b76adf9";
-			$pass ="1f4603cc";
-			$cnn2 = new PDO("mysql:host=$host; dbname=$dbname;", $user, $pass);
+			$user = "Isidrivebdd";
+			$pass = "t9*vLH&^47PY";
+			$cnn2 = new PDO("sqlsrv:Server=SRV-APPLICATION,1433;Database=Isidrive", $user , $pass);
 			?>
 			<?php
 			$clinum = $_SESSION['clinum'];
@@ -33,15 +31,15 @@
 						?>
 						<div class="col-md-4 produit-case">
 							<?php
-							echo(utf8_encode("<b>Commande numÃ©ro : ") . $uneligne["comnum"] . "</b><br>");
-							echo("Date de la commande : <i>" . $uneligne["comdateh"] . "<br>" . "</i>Date du retrait : <i> " . $uneligne["comdatehretrait"] . "</i><br>");
+							echo(utf8_encode("<b>Commande numéro : ") . $uneligne["comnum"] . "</b><br>");
+							echo("Date de la commande : <i>" . $uneligne["comdateh"] . "<br>" . "</i>Date du retrait : <i> " . $uneligne["comdatehretrait"] . "</i><br>"); 
 							$reqresult2 = $cnn2->prepare("select * from commander join produit on commander.pronum=produit.pronum where comnum=". $uneligne["comnum"]);
 							$reqresult2->execute();
 							$deuxligne = $reqresult2->fetch();
 
 							while ($deuxligne!=null)
 							{
-								echo(utf8_encode("Quantitï¿½ : ") . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
+								echo(utf8_encode("Quantité : ") . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
 								$deuxligne = $reqresult2->fetch();
 							}
 							$reqresult2->closeCursor();
@@ -49,7 +47,7 @@
 							?>
 						</div>
 						<?php
-					}
+					} 
 					?>
 				</body>
 				</html>

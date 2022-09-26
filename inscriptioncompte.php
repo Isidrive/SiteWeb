@@ -1,6 +1,6 @@
 <?php
 include("includes/pageentete.php");
-//---------------- 1A : Affichage du formulaire avec les catégories
+//---------------- 1A : Affichage du formulaire avec les catégories 
 ?>
 <center>
 	<div class="p-3 mb-2 bg-primary text-white"><h3>Inscription</h3></div>
@@ -21,7 +21,7 @@ include("includes/pageentete.php");
 					</div>
 					<div class="form-group col-md-4">
 						<label for="inputCity">Téléphone</label>
-						<input type="number" class="form-control" id="inputCity" name="txttel"  minLength="0" maxLength="10" min="0">
+						<input type="text" class="form-control" id="inputCity" name="txttel">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputEmail4">Email</label>
@@ -45,7 +45,7 @@ include("includes/pageentete.php");
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputZip">Code Postal</label>
-						<input type="number" class="form-control" id="inputZip" name="txtcp"  minLength="0" maxLength="5" min="0">
+						<input type="text" class="form-control" id="inputZip" name="txtcp">
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary" name="btnajouter">S'incrire</button>
@@ -60,7 +60,7 @@ include("includes/pageentete.php");
 	if(isset($_GET["btnajouter"])==true)
 	{
 			// Création du compte
-		$reqresult = $cnn -> prepare("insert into client (clinom , cliprenom, cliadr1, cliadr2, clicp, cliville, clitel, climail, climdp) values (:clinom, :cliprenom, :cliadr1, :cliadr2, :clicp, :cliville, :clitel, :climail, :climdp)");
+		$reqresult = $cnn -> prepare("insert into client (clinom , cliprenom, cliadr1, cliadr2, clicp, cliville, clitel, climail, climdp, magnum) values (:clinom, :cliprenom, :cliadr1, :cliadr2, :clicp, :cliville, :clitel, :climail, :climdp, 3)");
 		$reqresult->bindParam(':clinom',$_GET["txtnom"],PDO::PARAM_STR);
 		$reqresult->bindParam(':cliprenom',$_GET["txtprenom"],PDO::PARAM_STR);
 		$reqresult->bindParam(':cliadr1',$_GET["txtadr1"],PDO::PARAM_STR);
@@ -72,8 +72,8 @@ include("includes/pageentete.php");
 		$reqresult->bindParam(':climdp',$_GET["txtmdp"],PDO::PARAM_STR);
 		$res=$reqresult -> execute();
 		$reqresult -> closeCursor();
-		?>
-		<div class="p-3 mb-2 bg-light text-dark">Votre compte a été créé ! Redirection automatique à la page de connexion dans 3 secondes</div>
+		?> 
+		<div class="p-3 mb-2 bg-light text-dark">Votre compte a été créé ! Redirection automatique à la page de connexion dans 3 secondes</div> 
 		<?php
 		header("Refresh: 3; URL=connexioncompte.php");
 	}
