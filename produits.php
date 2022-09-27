@@ -72,7 +72,7 @@ if(isset($_GET['txtrech'])!="")
 {
 	$textrech = $_GET['txtrech']
 	?>
-    
+
 	<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
 <?php
 }
