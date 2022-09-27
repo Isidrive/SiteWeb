@@ -40,6 +40,7 @@
 	// Récupère la date et l'heure actuel
 				$dateactuelbd = date("Y-m-d H:i:s");
 				$dateactuelfr = date("d-m-Y H:i:s");
+                $datefr = date("Y-m-d");
 				echo ("<br> <br>");
 				echo("<br> Choississez la date et l'heure à laquelle vous souhaitez récuperer votre commande : <br> Date actuel : $dateactuelfr <br>");
 				?>
@@ -60,7 +61,7 @@
 
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
-                if($_GET["dateretrait"]<= $dateactuelfr){
+                if($_GET["dateretrait"]<= $datefr){
                 echo ('<script>alert("La date de retrait rentrer est invalide ou inférieur a la date du jour! \n\n merci de rentrer une date valide")</script>');
                 }
                 else{
