@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     <label for="catnum">Catégorie : </label>
-                    <select class="form-select mb-2 mt-2 mx-auto w-50" aria-label="Default"  id="catnum" onchange='form.submit()' name="catnum">
+                    <select class="form-select mb-2 mt-2 mx-auto w-25" aria-label="Default"  id="catnum" onchange='form.submit()' name="catnum">
 
                     <option></option>
 					<?php
@@ -48,7 +48,7 @@
 					?>
                 <div class="form-group">
                     <label for="catnum">Sous-catégorie : </label>
-                    <select class="form-select mb-2 mt-2 mx-auto w-50" aria-label="Default"  id="sounum" onchange='form.submit()' name="sounum">
+                    <select class="form-select mb-2 mt-2 mx-auto w-25" aria-label="Default"  id="sounum" onchange='form.submit()' name="sounum">
                     <option></option>
 						<?php
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
@@ -81,17 +81,26 @@ if(isset($_GET['txtrech'])!="")
 {
 	$textrech = $_GET['txtrech']
 	?>
-	<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
+	<br>
+    <div class="input-group mb-3">
+        <label for="txtrech">Recherche par texte</label>
+        <input type="text" class="form-control"  name="txtrech" id="txtrech" aria-label="Recipient's username" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" name="btnrechercher">Rechercher</button>
+        </div>
+    </div>
+
+    Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
 <?php
 }
 else
 {
-	?>
-<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value="">
+//	?>
+<!--<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value="">-->
 <?php
 }
 ?>
-<button type="submit" class="btn btn-primary" name=btnrechercher>Rechercher</button>
+<!--<button type="submit" class="btn btn-primary" name=btnrechercher>Rechercher</button>-->
 </form>
 <?php
 
