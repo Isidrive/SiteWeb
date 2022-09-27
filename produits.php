@@ -14,7 +14,7 @@
 
 			<form method="get" action ="produits.php">
 
-                
+
 				Catégorie : <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  name="catnum">
 					<?php
 // Requête permettant d'extraire les catégories
@@ -72,6 +72,10 @@ if(isset($_GET['txtrech'])!="")
 {
 	$textrech = $_GET['txtrech']
 	?>
+    <div class="form-group">
+        <label for="txtrech">Recherche par texte</label>
+        <input type ="text" id="txtrech" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
+    </div>
 	<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
 <?php
 }
