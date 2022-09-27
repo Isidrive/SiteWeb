@@ -44,6 +44,7 @@
 								echo("Quantité : " . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
 								$deuxligne = $reqresult2->fetch();
 							}
+                            echo ("Total commande : " . $reqresult2["prixtotal"]. " ");
 							$reqresult2->closeCursor();
 							$uneligne = $reqresult->fetch();
 							?>
