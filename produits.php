@@ -14,8 +14,9 @@
 
 			<form method="get" action ="produits.php">
 
-                <div class="mb-3 floating-label">
-                    <select class="form-control" id="catnum"  onchange='form.submit()' name="catnum">
+                <div class="form-group">
+                    <label for="catnum">Catégorie : </label>
+                    <select class="form-select mb-2 mt-2 mx-auto" aria-label="Default"  id="catnum" onchange='form.submit()' name="catnum">
 
                     <option></option>
 					<?php
@@ -38,8 +39,7 @@
 					}
 					$reqresult->closeCursor();
 					?>
-                    </select>
-                    <label for="catnum">Catégorie :</label>
+				</select>
                 </div>
 				<!--Fin de la requête permettant d'extraire les catégories-->
 				<?php
