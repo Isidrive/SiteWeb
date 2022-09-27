@@ -37,8 +37,7 @@
 				</select>
 				<!--Fin de la requête permettant d'extraire les catégories-->
 				<?php
-				if (isset($_GET["catnum"]) && $_GET["catnum"]!="" )
-				{
+
 					?>
 					<br>Sous-catégorie : <select class="form-select mb-2 mt-2" aria-label="Default"  onload='form.submit()' onchange='form.submit()'  name="sounum">
 						<?php
@@ -65,7 +64,7 @@
 						?>
 					</select>
 					<?php
-} // Fermeture du if sur le cbo des soucat
+
 
 if(isset($_GET['txtrech'])!="")
 {
