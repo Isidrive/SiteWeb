@@ -125,7 +125,7 @@ if (isset($_GET['id']) == true) {
 			echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
-			echo("<tr><td colspan=5 class='mx-auto'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
+			echo("<tr><td colspan=5 class='mx-auto text-center'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 			$uneligne = $reqresult->fetch();
 		}
 		echo("</table>");
@@ -173,7 +173,7 @@ if (isset($_GET['id']) == true) {
 			echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
-			echo("<tr><td colspan=5 class='mx-auto' ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
+			echo("<tr><td colspan=5 class='mx-auto text-center' ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 			$uneligne = $reqresult->fetch();
 		}
 		echo("</table>");
@@ -217,7 +217,7 @@ if (isset($_GET['id']) == true) {
 				echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
-				echo("<tr><td colspan=5 class='mx-auto'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
+				echo("<tr><td colspan=5 class='mx-auto text-center'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 				$uneligne = $reqresult->fetch();
 			}
 			echo("</table>");
@@ -255,7 +255,7 @@ if (isset($_GET['id']) == true) {
 					echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
-					echo("<tr><td colspan=5 class='mx-auto'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
+					echo("<tr><td colspan=5 class='mx-auto text-center'><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
 					$uneligne = $reqresult->fetch();
 				}
 				echo("</table>");
