@@ -13,28 +13,32 @@
 		<div class="p-3 mb-2 bg-primary text-white"><h3>Produits<h3></div>
 
 			<form method="get" action ="produits.php">
-				Catégorie : <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  name="catnum">
-					<?php
-// Requête permettant d'extraire les catégories
-					$reqresult = $cnn->prepare("select * from categorie");
-// Execution de la requête
-					$reqresult->execute();
-					$uneligne = $reqresult->fetch();
-					while ($uneligne!=null)
-					{
-						if(isset($_GET["catnum"]) && $uneligne["catnum"] == $_GET["catnum"])
-						{
-							echo("<option value='$uneligne[catnum]'selected='selected'> " . utf8_encode($uneligne["catlib"]) ."</option selected='selected'>");
-						}
-						else
-						{
-							echo("<option value='$uneligne[catnum]'>" . utf8_encode($uneligne["catlib"]) ."</option>");
-						}
-						$uneligne = $reqresult->fetch();
-					}
-					$reqresult->closeCursor();
-					?>
-				</select>
+
+                <div class="mb-3 floating-label">
+                    <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  name="catnum">
+                        <?php
+                        // Requête permettant d'extraire les catégories
+                        $reqresult = $cnn->prepare("select * from categorie");
+                        // Execution de la requête
+                        $reqresult->execute();
+                        $uneligne = $reqresult->fetch();
+                        while ($uneligne!=null)
+                        {
+                            if(isset($_GET["catnum"]) && $uneligne["catnum"] == $_GET["catnum"])
+                            {
+                                echo("<option value='$uneligne[catnum]'selected='selected'> " . utf8_encode($uneligne["catlib"]) ."</option selected='selected'>");
+                            }
+                            else
+                            {
+                                echo("<option value='$uneligne[catnum]'>" . utf8_encode($uneligne["catlib"]) ."</option>");
+                            }
+                            $uneligne = $reqresult->fetch();
+                        }
+                        $reqresult->closeCursor();
+                        ?>
+                    </select>
+                    <label for="select">Catégorie :</label>
+                </div>
 				<!--Fin de la requête permettant d'extraire les catégories-->
 				<?php
 
