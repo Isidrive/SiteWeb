@@ -122,7 +122,7 @@ if (isset($_GET['id']) == true) {
 
 		while ($uneligne!=null)
 		{
-			echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
+			echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type="button" class="btn btn-primary"><a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
 			echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
@@ -170,7 +170,7 @@ if (isset($_GET['id']) == true) {
 
 		while ($uneligne!=null)
 		{
-			echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
+			echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type="button" class="btn btn-primary"><a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
 			echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
@@ -214,7 +214,7 @@ if (isset($_GET['id']) == true) {
 
 			while ($uneligne!=null)
 			{
-				echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
+				echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type="button" class="btn btn-primary"><a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
 				echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
@@ -252,7 +252,7 @@ if (isset($_GET['id']) == true) {
 
 				while ($uneligne!=null)
 				{
-					echo ("<tr><td>" . utf8_encode($uneligne["prolib"]) . "</td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a>" ."</td> </tr> ");
+					echo ("<tr><td><b>" . utf8_encode($uneligne["prolib"]) . "</b></td> <td>" . $uneligne["proprix"] . "€" . " </td> <td> " ."<button type="button" class="btn btn-primary"><a href ='leproduit.php?pronum=$uneligne[pronum]'> Ajouter au panier </a></button>" ."</td> </tr> ");
 
 
 					echo("<tr><td colspan=5 ><img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 /></td></tr>");
