@@ -14,7 +14,7 @@
 
 			<form method="get" action ="produits.php">
 
-                <div class="mb-3 floating-label">
+                <div class="mb-3 floating-label" id="catnum">
                     <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  id="catnum" name="catnum">
                         <?php
                         // Requête permettant d'extraire les catégories
