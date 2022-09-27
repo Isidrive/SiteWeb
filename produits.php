@@ -86,7 +86,7 @@ if(isset($_GET['txtrech'])!="")
 
         <input type="text" class="form-control "  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" name="btnrechercher">Rechercher</button>
+            <button class="btn btn-outline-secondary" type="submit" name="btnrechercher">Rechercher</button>
         </div>
     </div>
 
