@@ -166,7 +166,7 @@ if (isset($_GET['id']) == true) {
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
-		echo("<table border=1 >");
+		echo("<table class='table' border=1 >");
 
 
 		while ($uneligne!=null)
@@ -210,7 +210,7 @@ if (isset($_GET['id']) == true) {
 			$reqresult->bindParam(':sounum',$_GET["sounum"],PDO::PARAM_INT);
 			$reqresult->execute();
 			$uneligne = $reqresult->fetch();
-			echo("<table border=1 >");
+			echo("<table class='table' border=1 >");
 
 
 			while ($uneligne!=null)
@@ -248,7 +248,7 @@ if (isset($_GET['id']) == true) {
 				$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $_GET["txtrech"] ."%' limit 10");
 				$reqresult->execute();
 				$uneligne = $reqresult->fetch();
-				echo("<table border=1 >");
+				echo("<table class='table' border=1 >");
 
 
 				while ($uneligne!=null)
