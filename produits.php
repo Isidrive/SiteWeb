@@ -118,7 +118,7 @@ if (isset($_GET['id']) == true) {
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
-		echo("<table border=1 >");
+		echo("<table class='table' >");
 
 
 		while ($uneligne!=null)

@@ -95,9 +95,10 @@
 				<?php
 				header("Refresh: 3; URL=index.php");
 
-
 			}
 			?>
 		</center>
 	</body>
 	</html>
+
+
