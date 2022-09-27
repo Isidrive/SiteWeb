@@ -13,7 +13,10 @@
 		<div class="p-3 mb-2 bg-primary text-white"><h3>Produits<h3></div>
 
 			<form method="get" action ="produits.php">
-				Catégorie : <select class="form-select mb-2 mt-2 mx-auto" aria-label="Default"  onchange='form.submit()' name="catnum">
+
+                <div class="mb-3 floating-label">
+                    <select class="form-control" id="catnum"  onchange='form.submit()' name="catnum">
+
                     <option></option>
 					<?php
 // Requête permettant d'extraire les catégories
@@ -35,7 +38,9 @@
 					}
 					$reqresult->closeCursor();
 					?>
-				</select>
+                    </select>
+                    <label for="catnum">Catégorie :</label>
+                </div>
 				<!--Fin de la requête permettant d'extraire les catégories-->
 				<?php
 				if (isset($_GET["catnum"]) && $_GET["catnum"]!="" )
