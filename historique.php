@@ -38,7 +38,7 @@
 							$reqresult2 = $cnn2->prepare("select * from commander join produit on commander.pronum=produit.pronum where comnum=". $uneligne["comnum"]);
 							$reqresult2->execute();
 							$deuxligne = $reqresult2->fetch();
-                            echo ("Total commande : " . $deuxligne["prixtotal"]. " € <br>");
+                            echo ("Total de la commande : " . $deuxligne["prixtotal"]. " € <br>");
 							while ($deuxligne!=null)
 							{
 								echo("Quantité : " . $deuxligne["quantite"] ."<br> Produit : " . utf8_encode($deuxligne["prolib"])  . "<br><br>");
