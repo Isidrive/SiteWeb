@@ -114,23 +114,17 @@ if (isset($_GET['id']) == true) {
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		$n=1;
-		?>
-        
-        <nav aria-label="Page">
-  <ul class="pagination">
 
-      <?php
-      for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
-      {
-          echo '<li class="page-item"><a class="page-link" href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a></li>';
-          $n++;
-          echo(". ");
-      }
+
+        echo "Page : ";
+        for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+        {
+
+        echo '<a href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a>';
+        $n++;
+        echo(". ");
+        }
       $reqresult->closeCursor();
-      ?>
-  </ul>
-</nav>
-	<?php
 
 
 
