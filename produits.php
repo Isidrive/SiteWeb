@@ -15,7 +15,7 @@
 			<form method="get" action ="produits.php">
 
                 <div class="mb-3 floating-label">
-                    <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  name="catnum">
+                    <select class="form-select mb-2 mt-2" aria-label="Default" onload="form.submit()" onchange='form.submit()'  id="catnum" name="catnum">
                         <?php
                         // Requête permettant d'extraire les catégories
                         $reqresult = $cnn->prepare("select * from categorie");
@@ -37,7 +37,7 @@
                         $reqresult->closeCursor();
                         ?>
                     </select>
-                    <label for="select">Catégorie :</label>
+                    <label for="catnum">Catégorie :</label>
                 </div>
 				<!--Fin de la requête permettant d'extraire les catégories-->
 				<?php
