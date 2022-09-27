@@ -149,7 +149,7 @@ if (isset($_GET['id']) == true) {
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
     <button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>
   </div>
-</div>");
+</div></div>");
 			$uneligne = $reqresult->fetch();
 		}
 		echo("</div>");
@@ -202,7 +202,7 @@ if (isset($_GET['id']) == true) {
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
     <button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>
   </div>
-</div>");
+</div></div>");
             $uneligne = $reqresult->fetch();
         }
         echo("</div>");
@@ -251,7 +251,7 @@ if (isset($_GET['id']) == true) {
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
     <button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>
   </div>
-</div>");
+</div></div>");
                 $uneligne = $reqresult->fetch();
             }
             echo("</div>");
@@ -294,7 +294,7 @@ if (isset($_GET['id']) == true) {
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
     <button type='button' class='btn btn-primary'><a href ='leproduit.php?pronum=$uneligne[pronum]' style='color:white; text-decoration: none;'> Ajouter au panier </a></button>
   </div>
-</div>");
+</div></div>");
                     $uneligne = $reqresult->fetch();
                 }
                 echo("</div>");
