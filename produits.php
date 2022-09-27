@@ -82,9 +82,9 @@ if(isset($_GET['txtrech'])!="")
 	$textrech = $_GET['txtrech']
 	?>
 	<br>
-    <div class="input-group mb-3">
-        <label for="txtrech">Recherche par texte</label>
-        <input type="text" class="form-control mx-auto w-25"  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
+    <div class="input-group mb-3 mx-auto w-25">
+
+        <input type="text" class="form-control "  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" name="btnrechercher">Rechercher</button>
         </div>
