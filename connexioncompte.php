@@ -11,15 +11,15 @@ include("includes/pageentete.php");
 	</center>
 	<div class="container">
 		<form>
-			<div class="form-group">
+			<div class="form-group mt-3">
 				<label for="exampleInputEmail1">Adresse mail</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Votre adresse mail" name="txtmail">
 			</div>
-			<div class="form-group">
+			<div class="form-group mt-3">
 				<label for="exampleInputPassword1">Mot de passe</label>
 				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Votre mot de passe" name=txtmdp>
 			</div>
-			<button type="submit" class="btn btn-primary" name=btnconnexion>Se connecter</button>
+			<button type="submit" class="btn btn-primary mt-3" name=btnconnexion>Se connecter</button>
 		</form>
 
 		<!-- Requête de vérification -->
@@ -54,5 +54,6 @@ include("includes/pageentete.php");
 		?>
 	</div>
 	<br>
+</form>
 </body>
 </html>    
