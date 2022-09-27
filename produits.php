@@ -14,7 +14,6 @@
 
 			<form method="get" action ="produits.php">
 				Catégorie : <select class="form-select mb-2 mt-2" aria-label="Default" onchange='form.submit()' name="catnum">
-					<option ></option>
 					<?php
 // Requête permettant d'extraire les catégories
 					$reqresult = $cnn->prepare("select * from categorie");
@@ -118,7 +117,7 @@ if (isset($_GET['id']) == true) {
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
-		echo("<table class='table' >");
+		echo("<table class='table table-striped w-auto' >");
 
 
 		while ($uneligne!=null)
@@ -166,7 +165,7 @@ if (isset($_GET['id']) == true) {
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
-		echo("<table class='table' border=1 >");
+		echo("<table class='table table-striped w-auto' border=1 >");
 
 
 		while ($uneligne!=null)
@@ -210,7 +209,7 @@ if (isset($_GET['id']) == true) {
 			$reqresult->bindParam(':sounum',$_GET["sounum"],PDO::PARAM_INT);
 			$reqresult->execute();
 			$uneligne = $reqresult->fetch();
-			echo("<table class='table' border=1 >");
+			echo("<table class='table table-striped w-auto' border=1 >");
 
 
 			while ($uneligne!=null)
@@ -248,7 +247,7 @@ if (isset($_GET['id']) == true) {
 				$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $_GET["txtrech"] ."%' limit 10");
 				$reqresult->execute();
 				$uneligne = $reqresult->fetch();
-				echo("<table class='table' border=1 >");
+				echo("<table class='table table-striped w-auto' border=1 >");
 
 
 				while ($uneligne!=null)
