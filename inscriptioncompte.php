@@ -21,7 +21,7 @@ include("includes/pageentete.php");
 					</div>
 					<div class="form-group col-md-4">
 						<label for="inputCity">Téléphone</label>
-						<input type="text" class="form-control" id="inputCity" name="txttel" pattern="[0-9]">
+						<input type="tel" class="form-control" id="inputCity" name="txttel" pattern="[0-9]2-[0-9]2-[0-9]2-[0-9]2-[0-9]2">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="inputEmail4">Email</label>
