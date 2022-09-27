@@ -48,7 +48,7 @@
 
 						<div class="form-group col-md-4">
 							<label for="inputCity">Date de retrait au format Années - Mois - jour</label>
-							<input type="text" class="form-control" id="inputCity"  placeholder="exemple : 2022-09-25" name="dateretrait" pattern="[0-9]4-[0-9]2-[0-9]2">
+							<input type="text" class="form-control" id="inputCity"  placeholder="exemple : 2022-09-25" name="dateretrait" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
 						</div>
 					
 					<br>
