@@ -95,7 +95,15 @@ if(isset($_GET['txtrech'])!="")
 else
 {
 //	?>
-<!--<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value="">-->
+    <br>
+    <div class="input-group mb-3 mx-auto w-25">
+
+        <input type="text" class="form-control "  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" name="btnrechercher">Rechercher</button>
+        </div>
+    </div>
+
 <?php
 }
 ?>
