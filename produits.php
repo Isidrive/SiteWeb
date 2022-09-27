@@ -14,6 +14,7 @@
 
 			<form method="get" action ="produits.php">
 				Catégorie : <select class="form-select mb-2 mt-2" aria-label="Default"  onchange='form.submit()' name="catnum">
+                    <option></option>
 					<?php
 // Requête permettant d'extraire les catégories
 					$reqresult = $cnn->prepare("select * from categorie");
