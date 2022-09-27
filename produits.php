@@ -72,10 +72,7 @@ if(isset($_GET['txtrech'])!="")
 {
 	$textrech = $_GET['txtrech']
 	?>
-    <div class="form-group">
-        <label for="txtrech">Recherche par texte</label>
-        <input type ="text" id="txtrech" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
-    </div>
+    
 	<br>Recherche par texte <input type ="text" name ="txtrech" id="txtrech" value=<?php echo($textrech) ?> >
 <?php
 }
