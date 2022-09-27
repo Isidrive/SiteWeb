@@ -16,7 +16,7 @@
 
                 <div class="form-group">
                     <label for="catnum">Catégorie : </label>
-                    <select class="form-select mb-2 mt-2 mx-auto" aria-label="Default"  id="catnum" onchange='form.submit()' name="catnum">
+                    <select class="form-select mb-2 mt-2 mx-auto w-50" aria-label="Default"  id="catnum" onchange='form.submit()' name="catnum">
 
                     <option></option>
 					<?php
@@ -46,7 +46,9 @@
 				if (isset($_GET["catnum"]) && $_GET["catnum"]!="" )
 				{
 					?>
-					<br>Sous-catégorie : <select class="form-select mb-2 mt-2 mx-auto" aria-label="Default"  onchange='form.submit()' name="sounum">
+                <div class="form-group">
+                    <label for="catnum">Sous-catégorie : </label>
+                    <select class="form-select mb-2 mt-2 mx-auto w-50" aria-label="Default"  id="sounum" onchange='form.submit()' name="sounum">
                     <option></option>
 						<?php
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
@@ -71,6 +73,7 @@
 						$reqresult->closeCursor();
 						?>
 					</select>
+                </div>
 					<?php
 } // Fermeture du if sur le cbo des soucat
 
