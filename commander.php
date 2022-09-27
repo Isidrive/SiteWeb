@@ -58,10 +58,12 @@
 			<?php
 
 
-
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
-
+                if($_GET["dateretrait"]<= $dateactuelfr){
+                echo ('error datetime');
+                }
+                else{
 				$dateretrait = $_GET["dateretrait"];
 				$clinum = $_SESSION['clinum'];
 
@@ -94,7 +96,7 @@
 				<div class="p-3 mb-2 bg-light text-dark">Votre commande a été pris en compte ! Redirection automatique à la page d'acceuil dans 3 secondes</div> 
 				<?php
 				header("Refresh: 3; URL=index.php");
-
+                }
 			}
 			?>
 		</center>

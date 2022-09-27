@@ -48,7 +48,7 @@
 								$numprod = $i+1;
 								$prix = $uneligne["proprix"] * $quantite;
 								$prixtotal = $prixtotal + $prix;
-								echo("<i> Produit n° $numprod </i> <br> <b>" .  utf8_encode($prolib) . "</b> <br> <b>Ref :</b> $pronum <br> <b>Quantité :</b> $quantite <br> <b>Prix :</b> $prix € <br> <img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]'/></div>");
+								echo("<i> Produit n° $numprod </i> <br> <b>" .  utf8_encode($prolib) . "</b> <br> <b>Réference :</b> $pronum <br> <b>Quantité :</b> $quantite <br> <b>Prix :</b> $prix € <br> <img id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]'/></div>");
 							}
 							?>	
 						</div>
@@ -67,7 +67,7 @@
 					}
 					else
 					{
-						echo("Connectez vous à votre compte client pour pouvoir passer la commande ! <br>");
+						echo("<p class='mb-2'>Connectez vous à votre compte client pour pouvoir passer la commande ! </p><br>");
 						?>
 						<a href="connexioncompte.php" class="btn btn-primary" role="button" aria-pressed="true">Se connecter</a>
 						<?php

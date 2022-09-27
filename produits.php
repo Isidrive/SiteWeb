@@ -82,7 +82,7 @@ else
 <?php
 }
 ?>
-<button type="submit" class="btn btn-primary" name=btnrechercher>Rechercher...</button>
+<button type="submit" class="btn btn-primary" name=btnrechercher>Rechercher</button>
 </form>
 <?php
 
