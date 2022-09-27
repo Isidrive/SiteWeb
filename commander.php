@@ -61,7 +61,7 @@
 			if(isset($_GET["btncommande"])==true && $_GET["dateretrait"]!="")
 			{
                 if($_GET["dateretrait"]<= $dateactuelfr){
-                echo ('<script>alert("La date de retrait rentrer est invalide ou inférieur a la date du jour! \n\n merci de rentrer une date valide")</script>");
+                echo ('<script>alert("La date de retrait rentrer est invalide ou inférieur a la date du jour! \n\n merci de rentrer une date valide")</script>');
                 }
                 else{
 				$dateretrait = $_GET["dateretrait"];
