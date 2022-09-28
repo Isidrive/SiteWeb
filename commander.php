@@ -92,7 +92,7 @@
 					$pronum = $_SESSION['tblpronum'][$i];
 					$quantite = $_SESSION['tblquantite'][$i];
 		// Requête
-					var_dump( $reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal,modeliv) VALUES ($quantite,$numcommande,$pronum,$prixtotal,$modeliv)"));
+					 $reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal,modeliv) VALUES ($quantite,$numcommande,$pronum,$prixtotal,'$modeliv')");
 						// Execution de la requête
 					$reqresult->execute();
 				}
