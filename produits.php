@@ -151,7 +151,7 @@ if (isset($_GET['id']) == true) {
 
 			echo ("<div class='col-4'>
                 <div class='card' style='width: 18rem;'>
-  <img class='mt-2 mb-2 center-block' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
+  <img class='mt-2 mb-2 text-center' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
@@ -204,7 +204,7 @@ if (isset($_GET['id']) == true) {
 
             echo ("<div class='col-4'>
                 <div class='card' style='width: 18rem;'>
-  <img class='mt-2 mb-2 center-block' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
+  <img class='mt-2 mb-2 text-center' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
@@ -253,7 +253,7 @@ if (isset($_GET['id']) == true) {
 
                 echo ("<div class='col-4'>
                 <div class='card' style='width: 18rem;'>
-  <img class='mt-2 mb-2 center-block' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
+  <img class='mt-2 mb-2 text-center' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
@@ -296,7 +296,7 @@ if (isset($_GET['id']) == true) {
 
                     echo ("<div class='col-4'>
                 <div class='card' style='width: 18rem;'>
-  <img class='mt-2 mb-2 center-block' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
+  <img class='mt-2 mb-2 text-center' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
     <p class='card-text'>" . $uneligne["proprix"] . "€</p>
