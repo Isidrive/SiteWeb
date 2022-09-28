@@ -36,7 +36,7 @@
 					$reqresult -> closeCursor();
 				}
 				echo("<br><b>Nombre de produit : $nombreproduit</b>  -  <b>Prix total : $prixtotal €</b>");?>
-            <label for="dateretrait">Mode de livraison souhaiter</label>
+            <br><label for="dateretrait">Mode de livraison souhaiter</label>
     <select class="form-select mb-2 mt-2 mx-auto w-25" aria-label="Default select example" name="modeliv" id="modeliv">
     <option value="Domicile">A domicile</option>
     <option value="Magasin">En Magasin</option>
@@ -92,7 +92,7 @@
 					$pronum = $_SESSION['tblpronum'][$i];
 					$quantite = $_SESSION['tblquantite'][$i];
 		// Requête
-					$reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal,modeliv) VALUES ($quantite,$numcommande,$pronum,$prixtotal,$modeliv)");
+					die( $reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal,modeliv) VALUES ($quantite,$numcommande,$pronum,$prixtotal,$modeliv)"));
 						// Execution de la requête
 					$reqresult->execute();
 				}
