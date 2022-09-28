@@ -123,7 +123,7 @@ if (isset($_GET['id']) == true) {
 		$uneligne = $reqresult->fetch();
 		$n=1;
 
-        echo "<nav aria-label='Page navigation example'>
+        echo "<nav aria-label='Page navigation example' class='text-center'>
   <ul class='pagination'>";
 
         for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
@@ -177,7 +177,7 @@ if (isset($_GET['id']) == true) {
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		$n=1;
-        echo "<nav aria-label='Page navigation example'>
+        echo "<nav aria-label='Page navigation example' class='text-center'>
   <ul class='pagination'>";
 
         for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
@@ -233,7 +233,7 @@ if (isset($_GET['id']) == true) {
 			$uneligne = $reqresult->fetch();
 			$n=1;
 			$catnum = $_GET['catnum'];
-            echo "<nav aria-label='Page navigation example'>
+            echo "<nav aria-label='Page navigation example' class='text-center'>
   <ul class='pagination'>";
 
             for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
@@ -282,7 +282,7 @@ if (isset($_GET['id']) == true) {
 				$reqresult->execute();
 				$uneligne = $reqresult->fetch();
 				$n=1;
-                echo "<nav aria-label='Page navigation example'>
+                echo "<nav aria-label='Page navigation example' class='text-center'>
   <ul class='pagination'>";
 
                 for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
