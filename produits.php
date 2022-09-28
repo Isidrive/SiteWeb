@@ -123,15 +123,17 @@ if (isset($_GET['id']) == true) {
 		$uneligne = $reqresult->fetch();
 		$n=1;
 
+        echo "<nav aria-label='Page navigation example'>
+  <ul class='pagination'>";
 
-        echo "Page : ";
         for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
         {
 
-        echo '<a href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a>';
+        echo '<li class="page-item"><a class="page-link" href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a></li>';
         $n++;
-        echo(". ");
+
         }
+        echo ("  </ul></nav>");
       $reqresult->closeCursor();
 
 
@@ -175,16 +177,17 @@ if (isset($_GET['id']) == true) {
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
 		$n=1;
-		echo "Page : ";
+        echo "<nav aria-label='Page navigation example'>
+  <ul class='pagination'>";
 
-		$catnum = $_GET['catnum'];
-		for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
-		{
+        for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+        {
 
-			echo '<a href="produits.php?id=' .$i. '&sounum=' .$sounum. '&txtrech=' .$txtrech. '&catnum=' .$catnum. '">' .$n. '</a>';
-			$n++;
-			echo(". ");
-		}
+            echo '<li class="page-item"><a class="page-link" href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a></li>';
+            $n++;
+
+        }
+        echo ("  </ul></nav>");
 		$reqresult->closeCursor();
 
 
@@ -230,15 +233,17 @@ if (isset($_GET['id']) == true) {
 			$uneligne = $reqresult->fetch();
 			$n=1;
 			$catnum = $_GET['catnum'];
-			echo "Page : ";
-			$txtrech = $_GET["txtrech"];
-			for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
-			{
+            echo "<nav aria-label='Page navigation example'>
+  <ul class='pagination'>";
 
-				echo '<a href="produits.php?id=' .$i. '&sounum=' .$sounum. '&txtrech=' .$txtrech. '&catnum=' .$catnum. '">' .$n. '</a>';
-				$n++;
-				echo(". ");
-			}
+            for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+            {
+
+                echo '<li class="page-item"><a class="page-link" href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a></li>';
+                $n++;
+
+            }
+            echo ("  </ul></nav>");
 
 // Utilisation de connexion.inc.php pour ce connecter à la base de donnée
 //require_once("connexion.inc.php");
@@ -277,15 +282,17 @@ if (isset($_GET['id']) == true) {
 				$reqresult->execute();
 				$uneligne = $reqresult->fetch();
 				$n=1;
-				echo "Page : ";
-				$txtrech = $_GET["txtrech"];
-				for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
-				{
+                echo "<nav aria-label='Page navigation example'>
+  <ul class='pagination'>";
 
-					echo '<a href="produits.php?id=' .$i. '&sounum=&txtrech=' .$txtrech. '&catnum=">' .$n. '</a>';
-					$n++;
-					echo(". ");
-				}
+                for ($i=0; $i <$uneligne['nbtoto'] ; $i=$i+10)
+                {
+
+                    echo '<li class="page-item"><a class="page-link" href="produits.php?id=' .$i. '&txtrech=' .$txtrech. '&sounum=' .$sounum. '">' .$n. '</a></li>';
+                    $n++;
+
+                }
+                echo ("  </ul></nav>");
 
 
 				$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where prolib LIKE '%". $_GET["txtrech"] ."%' limit 10");
