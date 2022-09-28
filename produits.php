@@ -195,7 +195,7 @@ if (isset($_GET['id']) == true) {
 
 
 		//$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' limit $id ORDER BY pronum) LIMIT 10 ORDER BY pronum");
-        var_dump($reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum (Select * from(SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum LIMIT $id) ORDER BY pronum limit 10"););
+        var_dump($reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum (Select * from(SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum LIMIT $id) ORDER BY pronum limit 10"));
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
         echo(" <div class='row'>");
