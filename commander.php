@@ -35,8 +35,13 @@
 					echo ("<i> Produit n° $numprod </i> : "  .  utf8_encode($prolib) . " - <b>Quantité :</b> $quantite - <b>Prix :</b> $prix € <br/>");
 					$reqresult -> closeCursor();
 				}
-				echo("<br><b>Nombre de produit : $nombreproduit</b>  -  <b>Prix total : $prixtotal €</b>");
-
+				echo("<br><b>Nombre de produit : $nombreproduit</b>  -  <b>Prix total : $prixtotal €</b>");?>
+            <label for="dateretrait">Mode de livraison souhaiter</label>
+    <select class="form-select mb-2 mt-2 mx-auto w-25" aria-label="Default select example" name="modeliv" id="modeliv">
+    <option value="Domicile">A domicile</option>
+    <option value="Magasin">En Magasin</option>
+    </select>
+            <?php
 	// Récupère la date et l'heure actuel
 				$dateactuelbd = date("Y-m-d H:i:s");
 				$dateactuelfr = date("d-m-Y H:i:s");
@@ -48,8 +53,8 @@
 				<div class="container">
 
 						<div class="form-group col-md-4">
-							<label for="inputCity">Date de retrait au format Années - Mois - jour</label>
-							<input type="text" class="form-control" id="inputCity"  placeholder="exemple : 2022-09-25" name="dateretrait" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+							<label for="dateretrait">Date de retrait au format Années - Mois - jour</label>
+							<input type="text" class="form-control" id="dateretrait"  placeholder="exemple : 2022-09-25" name="dateretrait" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
 						</div>
 					
 					<br>
@@ -65,6 +70,7 @@
                 echo ('<script>alert("La date de retrait rentrer est invalide ou inférieur a la date du jour! \n\n merci de rentrer une date valide")</script>');
                 }
                 else{
+                    $modeliv = $_GET["modeliv"];
 				$dateretrait = $_GET["dateretrait"];
 				$clinum = $_SESSION['clinum'];
 
@@ -86,7 +92,7 @@
 					$pronum = $_SESSION['tblpronum'][$i];
 					$quantite = $_SESSION['tblquantite'][$i];
 		// Requête
-					$reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal) VALUES ($quantite,$numcommande,$pronum,$prixtotal)");
+					$reqresult = $cnn->prepare("INSERT INTO commander (quantite,comnum,pronum,prixtotal,modeliv) VALUES ($quantite,$numcommande,$pronum,$prixtotal,$modeliv)");
 						// Execution de la requête
 					$reqresult->execute();
 				}
