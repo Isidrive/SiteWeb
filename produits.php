@@ -98,7 +98,7 @@ else
     <br>
     <div class="input-group mb-3 mx-auto w-25">
 
-        <input type="text" class="form-control "  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo($textrech) ?> >
+        <input type="text" class="form-control "  name="txtrech" id="txtrech" aria-label="Default" aria-describedby="basic-addon2" value=<?php echo( '') ?> >
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="submit" name="btnrechercher">Rechercher</button>
         </div>
@@ -195,7 +195,7 @@ if (isset($_GET['id']) == true) {
 
 
 		//$reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum NOT IN (SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' limit $id ORDER BY pronum) LIMIT 10 ORDER BY pronum");
-       $reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum not in (Select * from(SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum LIMIT $id)as temp) ORDER BY pronum limit 10"));
+       $reqresult = $cnn->prepare("select pronum,prolib,proprix,proimg,sounum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' and pronum not in (Select * from(SELECT pronum from produit where sounum = $sousnum and prolib LIKE '%". $txtrech ."%' ORDER BY pronum LIMIT $id)as temp) ORDER BY pronum limit 10");
 
 		$reqresult->execute();
 		$uneligne = $reqresult->fetch();
