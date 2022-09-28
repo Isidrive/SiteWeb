@@ -149,8 +149,8 @@ if (isset($_GET['id']) == true) {
 		while ($uneligne!=null)
 		{
 
-			echo ("<div class='col-4'>
-                <div class='card' style='width: 18rem;'>
+			echo ("<div class='col-4 mt-2 mb-2'>
+                <div class='card' style='width: 25rem;'>
   <img class='mt-2 mb-2 mx-auto text-center' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
@@ -202,8 +202,8 @@ if (isset($_GET['id']) == true) {
         while ($uneligne!=null)
         {
 
-            echo ("<div class='col-4'>
-                <div class='card' style='width: 18rem;'>
+            echo ("<div class='col-4 mt-2 mb-2'>
+                <div class='card' style='width: 25rem;'>
   <img class='mt-2 mb-2 text-center mx-auto' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
@@ -251,8 +251,8 @@ if (isset($_GET['id']) == true) {
             while ($uneligne!=null)
             {
 
-                echo ("<div class='col-4'>
-                <div class='card' style='width: 18rem;'>
+                echo ("<div class='col-4 mt-2 mb-2'>
+                <div class='card' style='width: 25rem;'>
   <img class='mt-2 mb-2 text-center mx-auto' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
@@ -294,8 +294,8 @@ if (isset($_GET['id']) == true) {
                 while ($uneligne!=null)
                 {
 
-                    echo ("<div class='col-4'>
-                <div class='card' style='width: 18rem;'>
+                    echo ("<div class='col-4 mt-2 mb-2'>
+                <div class='card' style='width: 25rem;'>
   <img class='mt-2 mb-2 text-center mx-auto' id='$uneligne[proimg]' src='photos/$uneligne[proimg]' alt='$uneligne[proimg]' width=200 />
   <div class='card-body'>
     <h5 class='nameproduit'><b>". utf8_encode($uneligne["prolib"]) . "</b></h5>
